@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<section>
+    <div style="background-color: rgb(255, 102, 0) ; display: flex; justify-content: space-between; align-items: center;  color: white; padding: 19px;" >
+        <div>
+            <h2>Notes App</h2>
+            <p>Take notes and never forget</p>
+        </div>
+
+        <div style="display: flex; align-items: center; gap:10px">
+            <a style="display:block; border: 1px solid #fff; padding: 5px 16px; text-decoration: none; color: #fff;"   href="./createnote.html">Create Note + </a>
+        </div>
+    </div>
+    
+    <!-- <p style="padding: 29px;">No notes to show</p> -->
+    
+    <div class="pageHeader">
+        <h1>My Notes</h1>
+        <input type="text" class="query" onkeyup="filterBooks()" placeholder="Filter Notes" style="padding:7px;">
+    </div>
+
+    <div class="nonotesContainer">
+        <div class="nonotes">
+            <h1>No Notes to display</h1>
+            <div style="display: flex; justify-content:center; align-items: center; margin-top: 50px;">
+                <h1 style="font-size: 100px">4</h1>
+                <img src="/images/happy-jumping-emoticon-vector-38648134.jpg" alt="">
+                <h1 style="font-size: 100px">4</h1>
+            </div>
+            <a style="display: inline-block; border: 1px solid #fff; padding: 5px 16px; margin-top: 1rem; text-decoration: none; color: #fff; background-color: rgb(255, 102, 0);"   href="./createnote.html">Create Note + </a>
+        </div>
+    </div>
+
+    <div class="Getnotes">
+
+    </div>
+    
+
+
+</section>
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<script src="/js/moment.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
