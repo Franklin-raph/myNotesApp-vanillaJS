@@ -1,6 +1,7 @@
-const editnotes = document.querySelector('#editnotes')
-const editnoteTitle = document.querySelector('#editnoteTitle')
-let notes = JSON.parse(localStorage.getItem('book'));
+const editNoteBody = document.querySelector('#editNoteBody')
+const editNoteTitle = document.querySelector('#editNoteTitle')
+const error =  document.getElementById("errorParagraph")
+let notes = JSON.parse(localStorage.getItem('note'));
 const noteId = location.hash.substr(1);
 let note = notes.find((note) => note.id.toString() === noteId);
 
@@ -8,12 +9,30 @@ if(!note){
     location.assign('/')
 }
 
-editnoteTitle.value = note.title
-editnotes.value = note.body
+editNoteTitle.value = note.title
+editNoteBody.value = note.body
 
 function updateNote(){
-    note.title = editnoteTitle.value
-    note.body = editnotes.value
-    localStorage.setItem("book", JSON.stringify(notes))
-    location.assign('/')
+
+    if(editNoteTitle.value === "" || editNoteBody.value === ""){
+        error.innerHTML = `<p class="errorMsg">Please fill in all fields</p>`
+    }  else {
+        note.title = editNoteTitle.value
+        note.body = editNoteBody.value
+        localStorage.setItem("note", JSON.stringify(notes))
+        location.assign('/')
+    }
+
+    if(editNoteTitle.value && editNoteBody.value === ""){
+        error.innerHTML = `<p class="errorMsg">Please fill in the note field</p>`
+    } 
+    if (editNoteTitle.value === "" && editNoteBody.value ){
+        error.innerHTML = `<p class="errorMsg">Please fill in the title field</p>`
+    }
+
+    setTimeout(() => {
+        error.innerHTML = ""
+    },3500)
+
+    
 }

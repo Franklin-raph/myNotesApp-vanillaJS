@@ -16,7 +16,7 @@
             <p>Take notes and never forget</p>
         </div>
 
-        <div style="display: flex; align-items: center; gap:10px">
+        <div style="display: flex; align-items: center; gap:10px" class="nav">
             <a style="display:block; border: 1px solid #fff; padding: 5px 16px; text-decoration: none; color: #fff;"   href="./createnote.html">Create Note + </a>
         </div>
     </div>
@@ -25,7 +25,10 @@
     
     <div class="pageHeader">
         <h1>My Notes</h1>
-        <input type="text" class="query" onkeyup="filterBooks()" placeholder="Filter Notes" style="padding:7px;">
+        <div class="searchDiv">
+            <input type="text" class="query" onkeyup="filterNotes()" placeholder="Filter Notes" style="padding:3px 7px;">
+            <i class="ri-search-line"></i>
+        </div>
     </div>
 
     <div class="nonotesContainer">

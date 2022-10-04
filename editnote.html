@@ -14,18 +14,18 @@
             <p>Take notes and never forget</p>
         </div>
 
-        <div style="display: flex; align-items: center; gap:10px">
+        <div style="display: flex; align-items: center; gap:10px" class="nav">
             <a href="/index.html"  style="display:block; border: 1px solid #fff; padding: 5px 16px; text-decoration: none; color: #fff;">Home</a>
             <a style="display:block; border: 1px solid #fff; padding: 5px 16px; text-decoration: none; color: #fff;"   href="./createnote.html">Create Note + </a>
         </div>
     </div>
     <div class="editPage">
         <div class="form"  style="width:50%; margin-left: auto; margin-right: auto; display: grid; place-items: center;">
-            <p id="errorParagraph" style="color: rgb(246, 52, 52) ;"> </p>
-            <input id="editnoteTitle" type="text" placeholder="Note title"  style="padding:10px; width:350px; margin: 30px;">
-            <textarea id="editnotes" name="" id="" cols="50" rows="10"  style="display:block; margin: 28px;"></textarea>
+            <p id="errorParagraph"> </p>
+            <input id="editNoteTitle" type="text" placeholder="Note Title"  style="padding:10px; width:490px; margin: 30px;">
+            <textarea name="" id="editNoteBody" cols="50" rows="10"  style="display:block; margin: 28px; padding:10px;" placeholder="Note Body"></textarea>
             
-            <button onclick="updateNote()" style="background-color:rgb(0, 255, 128); padding: 9px 18px; color: rgb(0, 0, 0); border:none; font-size: 18px; margin-left: 28px; text-decoration: none;">Update Note</button>
+            <button onclick="updateNote()" style="cursor: pointer; background-color:rgb(0, 255, 128); padding: 9px 18px; color: rgb(0, 0, 0); border:none; font-size: 18px; margin-left: 28px; text-decoration: none;">Update Note</button>
         </div>
     </div>
     <script src="/js/editNote.js"></script>
