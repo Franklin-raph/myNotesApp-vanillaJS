@@ -144,3 +144,24 @@ input,textarea{
 .hide{
   display: none;
 }
+
+.footer{
+  position: fixed;
+  background-color: rgb(255, 102, 0);
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  margin-top: 5rem;
+  bottom: 0;
+}
+
+@media screen and (max-width:576px){
+  .footer{
+      flex-direction: column;
+  }
+}
