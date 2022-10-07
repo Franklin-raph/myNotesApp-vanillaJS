@@ -54,7 +54,7 @@ input,textarea{
 }
 
 .notes{
-  background-color: rgb(202, 202, 206);
+  /* background-color: rgb(202, 202, 206); */
   /* margin-top: 1rem; */
   display:flex;
   justify-content: space-between;
@@ -62,9 +62,11 @@ input,textarea{
   flex-direction: column;
   width: 60%;
   margin: 30px auto 0;
-  gap: 1rem;
-  padding: 1rem 0 0;
-  border-radius: 20px;
+  position: relative;
+  padding: .3rem .7rem;
+  /* border-radius: 7px; */
+  border-left: 5px solid rgb(0, 255, 85);
+  box-shadow: 5px 5px 10px #eef;
 }
 
 .nonotes{
@@ -81,7 +83,7 @@ input,textarea{
 }
 
 .notes div:first-child, .notes p{
-  margin: 0 2rem 0 1rem;
+  /* margin: 0 2rem 0 .5rem; */
 }
 
 .nonotesContainer{
@@ -94,10 +96,17 @@ input,textarea{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border-top: 2px solid rgb(114, 114, 114);
-  background-color: rgb(150, 150, 150);;
+  border-top: 1px solid rgb(211, 211, 211);
   border-radius:0 0 20px 20px;
-  padding: 12px 1rem;
+  padding: 5px 0 1px;
+  font-size: 14px;
+}
+
+.options{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  
 }
 
 .noteText{
@@ -113,8 +122,20 @@ input,textarea{
 .notes p{
   overflow: hidden;
   -webkit-line-clamp: 2;
-  display: -webkit-box;
+  /* display: -webkit-box; */
   -webkit-box-orient: vertical;
+}
+
+.ri-more-2-fill{
+  cursor: pointer;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.ri-pencil-fill{
+  background-color: rgb(229, 255, 0);
+  padding: 5px;
+  border-radius: 20px;
 }
 
 .ri-delete-bin-2-fill{
@@ -125,8 +146,8 @@ input,textarea{
 }
 
 .ri-pencil-fill{
+  color: rgb(59, 59, 59);
   font-size: 26px;
-  color: rgb(192, 143, 8);
   cursor: pointer;
 }
 
@@ -135,15 +156,39 @@ input,textarea{
 }
 
 .titleAndBtn{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
-  align-items: center;
+  align-items: space-between;
   width: 57vw;
+  position: relative;
+  gap: 5px;
+}
+
+.ri-arrow-down-s-line{
+  cursor: pointer;
+  margin-left: 101%;
+  font-size: 20px;
+}
+
+.noteBody, .ri-delete-bin-2-fill, .ri-pencil-fill{
+  display: none;
+}
+
+.hideIcons{
+  display: block;
 }
 
 .hide{
+  display: block;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+.hideNotes{
   display: none;
 }
+
 
 .footer{
   position: fixed;
@@ -156,7 +201,7 @@ input,textarea{
   align-items: center;
   padding: 10px;
   gap: 5px;
-  margin-top: 5rem;
+  margin-top: 10rem;
   bottom: 0;
 }
 

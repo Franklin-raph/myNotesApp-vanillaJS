@@ -6,8 +6,27 @@ const pageHeader = document.querySelector('.pageHeader')
 const nonotes = document.querySelector('.nonotes')
 const nonotesContainer = document.querySelector('.nonotesContainer')
 const query = document.querySelector('.query')
+const total = document.querySelector('.total')
 
-// console.log(editnoteTitle.value)
+
+document.addEventListener('DOMContentLoaded', () => {
+    const notes = document.querySelectorAll('.notes')
+    notes.forEach(note => {
+        // console.log(note.children[1].children[1].children[2])
+        let noteBody = note.children[0].children[0].children[1].nextElementSibling
+        note.children[0].children[0].children[1].addEventListener('click', () => {
+            noteBody.classList.toggle('hide')
+        })
+
+        let deleteBtn = note.children[1].children[1].children[2].previousElementSibling
+        let editBtn = note.children[1].children[1].children[2].previousElementSibling.previousElementSibling
+        console.log(editBtn)
+        note.children[1].children[1].children[2].addEventListener("click", ()=>{
+            deleteBtn.classList.toggle('hideIcons')
+            editBtn.classList.toggle('hideIcons')
+        })
+    })
+})
 
 
 function createNote(){
@@ -47,6 +66,7 @@ function getNote(){
         nonotes.style.display = 'block'
         return
     }else{
+        total.textContent = `(${noteArray.length})`
         pageHeader.style.display = 'flex'
         nonotes.style.display = 'none'
         nonotesContainer.style.display = 'none'
@@ -58,19 +78,30 @@ function getNote(){
 
             <div>
                 <div class="titleAndBtn">
-                    <h2>Title: ${note.title}</h2>
-                    <i class="ri-pencil-fill" onclick="editNote(${note.id})"></i>
+                    <h3>Title: ${note.title}</h3>
+                    <i class="ri-arrow-down-s-line" onclick="toggleNote(${note.id})"></i>
+                    <p class="noteBody"> <span class="noteText">Note</span>: ${note.body}</p>
                 </div>
-                <p class="noteBody"> <span class="noteText">Note</span>: ${note.body}</p>
             </div>
             <div class="dateAndDel">
                 <i>created on: ${note.date}</i>
-                <i class="ri-delete-bin-2-fill" onclick="deleteNote(${note.id})"></i>
+                <div class="options">
+                    <i class="ri-pencil-fill" onclick="editNote(${note.id})"></i>
+                    <i class="ri-delete-bin-2-fill" onclick="deleteNote(${note.id})"></i>
+                    <i class="ri-more-2-fill"></i>
+                </div>
             </div>
         `
         Getnotes.appendChild(notes)
     })
 }
+
+function openOptions(){
+    document.querySelector('.ri-delete-bin-2-fill').style.color = 'green'
+}
+
+{/* <p class="noteBody"> <span class="noteText">Note</span>: ${note.body}</p> */}
+{/* <i class="ri-pencil-fill" onclick="editNote(${note.id})"></i> */}
 
 function editNote(id){
     location.assign(`./editnote.html#${id}`);
@@ -78,11 +109,17 @@ function editNote(id){
 
 getNote()
 
-// function toggleNote(){
-//     Array.from(Getnotes.children).forEach((item) => {
-//         console.log(item.innerHTML)
-//     })
-// }
+function toggleNote(){
+
+}
+
+Getnotes.addEventListener('click', function(e){
+    if(e.target.classList.contains('ri-pencil-fill')){
+        let note = e.target
+        console.log(note)
+        // Getnotes.childNodes
+    }
+})
 
 function deleteNote(id){
     let noteArray = JSON.parse(localStorage.getItem('note'));
@@ -103,12 +140,12 @@ function filterNotes(){
     Array.from(Getnotes.children).filter((item) => {
         return !item.textContent.toLowerCase().includes(searchInput)
     }).forEach((item) => {
-        item.classList.add('hide')
+        item.classList.add('hideNotes')
     })
 
     Array.from(Getnotes.children).filter((item) => {
         return item.textContent.toLowerCase().includes(searchInput)
     }).forEach((item) => {
-        item.classList.remove('hide')
+        item.classList.remove('hideNotes')
     })
 }
