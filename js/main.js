@@ -149,3 +149,6 @@ function filterNotes(){
         item.classList.remove('hideNotes')
     })
 }
+
+// NEWS API
+// 22da4f44923c423ab03de6ce914486f5
