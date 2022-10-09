@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <section>
+    <section class="createNote">
         <div class="nav" style="background-color: #425F57; display: flex; justify-content: space-between; align-items: center;  color: white; padding: 19px;" >
             <div style="display: flex; align-items:center; gap:10px">
                 <i class="ri-book-2-line" style="font-size: 40px;"></i>
@@ -20,12 +20,13 @@
             </div>
             <a href="/index.html"  style="display:block; border: 1px solid #fff; padding: 5px 16px; text-decoration: none; color: #fff;">Home</a>
         </div>
+        
         <div class="form"  style="width:50%; margin-left: auto; margin-right: auto; display: grid; place-items: center;">
             <p id="errorParagraph"> </p>
             <input id="noteTitle" type="text" placeholder="Note Title"  style="padding:10px; width:100%; margin: 30px;">
             <textarea id="notes" name="" id="" cols="50" rows="10"  style="display:block; margin: 28px; padding:10px; width: 100%;" placeholder="Note Body"></textarea>
             
-            <button onclick="createNote()" style="cursor: pointer; background-color:#749F82; padding: 9px 18px; color: rgb(255, 255, 255); font-weight: bold; border:none; font-size: 18px; margin-left: 28px; text-decoration: none;">Create Note</button>
+            <button onclick="createNote()" style="cursor: pointer; background-color:#749F82; padding: 9px 18px; color: rgb(255, 255, 255); font-weight: bold; border:none; font-size: 18px; text-decoration: none;">Create Note</button>
         </div>
 
     </section>

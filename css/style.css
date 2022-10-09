@@ -57,6 +57,11 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.createNote{
+  margin-bottom: 10rem;
 }
 
 input,textarea{
@@ -207,13 +212,16 @@ input,textarea{
   align-items: center;
   padding: 10px;
   gap: 5px;
-  margin-top: 10rem;
   bottom: 0;
 }
 
 @media screen and (max-width:750px){
   .pageHeader{
       flex-direction: column;
+  }
+
+  .nonotesContainer{
+    margin-top: 14rem;
   }
 }
 
