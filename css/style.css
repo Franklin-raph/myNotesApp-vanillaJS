@@ -291,6 +291,18 @@ input,textarea{
 
 @media screen and (max-width:576px){
 
+  .ri-book-2-line{
+    font-size: 28px !important;
+  }
+
+  .navText h2{
+    font-size: 18px;
+  }
+
+  .navText p{
+    display: none;
+  }
+
   .searchDiv input{
     width: 100%;
   }
@@ -300,7 +312,7 @@ input,textarea{
   }
 
   .notes{
-    width: 80%;
+    width: 85%;
   }
 
   .navToggler, .closeIcon{
