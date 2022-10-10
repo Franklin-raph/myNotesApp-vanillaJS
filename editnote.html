@@ -18,18 +18,30 @@
             </div>
         </div>
 
-        <div style="display: flex; align-items: center; gap:10px" class="nav">
-            <a href="/index.html"  style="display:block; border: 1px solid #fff; padding: 5px 16px; text-decoration: none; color: #fff;">Home</a>
-            <a style="display:block; border: 1px solid #fff; padding: 5px 16px; text-decoration: none; color: #fff;"   href="./createnote.html">Create Note + </a>
+        <div class="navToggler" onclick="openNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="navOverlay">
+            <div style="display: flex; align-items: center; gap:10px" class="nav">
+                <div class="closeIcon">
+                    <span></span>
+                    <span></span>
+                </div>
+                <a href="/index.html"  style="display:block; border: 1px solid #fff; padding: 5px 16px; text-decoration: none; color: #fff;">Home</a>
+                <a style="display:block; border: 1px solid #fff; padding: 5px 16px; text-decoration: none; color: #fff;"   href="./createnote.html">Create Note + </a>
+            </div>
         </div>
     </div>
     <div class="editPage">
-        <div class="form"  style="width:50%; margin-left: auto; margin-right: auto; display: grid; place-items: center;">
+        <div class="form">
             <p id="errorParagraph"> </p>
             <input id="editNoteTitle" type="text" placeholder="Note Title"  style="padding:10px; width:100%; margin: 30px;">
             <textarea name="" id="editNoteBody" cols="50" rows="10"  style="display:block; margin: 28px; width:100%; padding:10px;" placeholder="Note Body"></textarea>
             
-            <button onclick="updateNote()" style="cursor: pointer; background-color:#749F82; padding: 9px 18px; color: rgb(255, 255, 255); font-weight: bold; border:none; font-size: 18px; margin-left: 28px; text-decoration: none;">Update Note</button>
+            <button onclick="updateNote()">Update Note</button>
         </div>
     </div>
 

@@ -10,7 +10,8 @@
 </head>
 <body>
     <section class="createNote">
-        <div class="nav" style="background-color: #425F57; display: flex; justify-content: space-between; align-items: center;  color: white; padding: 19px;" >
+
+        <div style="background-color: #425F57 ; display: flex; justify-content: space-between; align-items: center;  color: white; padding: 19px;" >
             <div style="display: flex; align-items:center; gap:10px">
                 <i class="ri-book-2-line" style="font-size: 40px;"></i>
                 <div>
@@ -18,10 +19,22 @@
                     <p>Take notes and never forget</p>
                 </div>
             </div>
-            <a href="/index.html"  style="display:block; border: 1px solid #fff; padding: 5px 16px; text-decoration: none; color: #fff;">Home</a>
+
+            <div class="navToggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <div class="navOverlay">
+                <div class="nav">
+                    <a href="/index.html"  style="display:block; border: 1px solid #fff; padding: 5px 16px; text-decoration: none; color: #fff;">Home</a>
+                </div>
+            </div>
+    
         </div>
-        
-        <div class="form"  style="width:50%; margin-left: auto; margin-right: auto; display: grid; place-items: center;">
+
+        <div class="form">
             <p id="errorParagraph"> </p>
             <input id="noteTitle" type="text" placeholder="Note Title"  style="padding:10px; width:100%; margin: 30px;">
             <textarea id="notes" name="" id="" cols="50" rows="10"  style="display:block; margin: 28px; padding:10px; width: 100%;" placeholder="Note Body"></textarea>

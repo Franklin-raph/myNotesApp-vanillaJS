@@ -18,9 +18,49 @@
 #A8E890
 #CFFF8D */
 
+.nav{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .nav a:hover{
   background-color: #fff;
   color: #425F57 !important;
+}
+
+.navToggler{
+  display: none;
+  flex-direction: column;
+}
+
+.navToggler span{
+  padding: 1px 18px;
+  margin: 3px;
+  background-color: #fff;
+}
+
+.closeIcon{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  padding: 5px;
+  top: 4%;
+  right: 1%;
+}
+
+.closeIcon span{
+  padding: 1px 18px;
+  margin: 3px;
+  background-color: #fff;
+}
+
+.closeIcon span:first-child{
+  transform: rotate(45deg) translateY(5px);
+}
+
+.closeIcon span:last-child{
+  transform: rotate(-45deg) translateY(-5px);
 }
 
 .pageHeader{
@@ -69,8 +109,6 @@ input,textarea{
 }
 
 .notes{
-  /* background-color: rgb(202, 202, 206); */
-  /* margin-top: 1rem; */
   display:flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -79,9 +117,10 @@ input,textarea{
   margin: 30px auto 0;
   position: relative;
   padding: .3rem .7rem;
-  /* border-radius: 7px; */
   border-left: 5px solid #A8E890;
-  box-shadow: 5px 5px 10px #eef;
+  border-top: 1px solid #425F57;
+  border-bottom: 1px solid #425F57;
+  border-right: 1px solid #425F57;
 }
 
 .nonotes{
@@ -117,12 +156,30 @@ input,textarea{
   display: flex;
   align-items: center;
   gap: 5px;
-  
 }
 
 .noteText{
   font-weight: bolder;
   font-size: 20px;
+}
+
+.form{
+  width:50%; 
+  margin-left: auto; 
+  margin-right: auto; 
+  display: grid; 
+  place-items: center;
+}
+
+.editPage button{
+  cursor: pointer; 
+  background-color:#749F82; 
+  padding: 9px 18px; 
+  color: rgb(255, 255, 255); 
+  font-weight: bold; 
+  border:none; 
+  font-size: 18px;
+  text-decoration: none;
 }
 
 
@@ -200,7 +257,6 @@ input,textarea{
   display: none;
 }
 
-
 .footer{
   position: fixed;
   background-color: #425F57;
@@ -215,6 +271,10 @@ input,textarea{
   bottom: 0;
 }
 
+.editPage{
+  margin-bottom: 9rem;
+}
+
 @media screen and (max-width:750px){
   .pageHeader{
       flex-direction: column;
@@ -223,10 +283,53 @@ input,textarea{
   .nonotesContainer{
     margin-top: 14rem;
   }
+
+  .form{
+    width: 75%;
+  }
 }
 
 @media screen and (max-width:576px){
   .footer, .pageHeader{
       flex-direction: column;
+  }
+
+  .notes{
+    width: 80%;
+  }
+
+  .navToggler, .closeIcon{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .navOverlay{
+    background-color: rgba(0, 0, 0, 0.925);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    visibility: hidden;
+  }
+
+  .nav{
+    position: fixed;
+    width: 80%;
+    background-color: #749f82;
+    height: 50vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .nav a{
+    color: #000 !important;
+    border: 1px solid #000 !important;
   }
 }

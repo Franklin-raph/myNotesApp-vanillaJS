@@ -150,5 +150,9 @@ function filterNotes(){
     })
 }
 
-// NEWS API
+function openNav(){
+
+}
+
+// NEWS
 // 22da4f44923c423ab03de6ce914486f5
