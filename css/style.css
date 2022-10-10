@@ -13,10 +13,18 @@
 #A8E890
 #CFFF8D */
 
-/* #425F57
-#749F82
-#A8E890
-#CFFF8D */
+/*
+150050
+1746A2 */
+
+.generlNav{
+  background-color: #1746A2; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;  
+  color: white; 
+  padding: 19px;
+}
 
 .nav{
   display: flex;
@@ -26,7 +34,8 @@
 
 .nav a:hover{
   background-color: #fff;
-  color: #425F57 !important;
+  color: #1746A2 !important;
+  transition: .5s ease-in-out;
 }
 
 .navToggler{
@@ -85,7 +94,7 @@
 }
 
 .ri-search-line{
-  background-color: #749F82;
+  background-color: #1746A2;
   padding: 10px 11px;
   font-size: 18px;
   color: #fff;
@@ -117,7 +126,7 @@ input,textarea{
   margin: 30px auto 0;
   position: relative;
   padding: .3rem .7rem;
-  border-left: 5px solid #A8E890;
+  border-left: 5px solid #1746A2;
   border-top: 1px solid #425F57;
   border-bottom: 1px solid #425F57;
   border-right: 1px solid #425F57;
@@ -173,7 +182,7 @@ input,textarea{
 
 .editPage button{
   cursor: pointer; 
-  background-color:#749F82; 
+  background-color: #1746A2; 
   padding: 9px 18px; 
   color: rgb(255, 255, 255); 
   font-weight: bold; 
@@ -259,7 +268,7 @@ input,textarea{
 
 .footer{
   position: fixed;
-  background-color: #425F57;
+  background-color: #1746A2;
   color: #fff;
   text-align: center;
   width: 100%;
@@ -339,7 +348,7 @@ input,textarea{
   .nav{
     position: fixed;
     width: 80%;
-    background-color: #749f82;
+    background-color: #1746A2;
     height: 50vh;
     left: 50%;
     top: 50%;
