@@ -4,6 +4,7 @@ const error =  document.getElementById("errorParagraph")
 let notes = JSON.parse(localStorage.getItem('note'));
 const noteId = location.hash.substr(1);
 let note = notes.find((note) => note.id.toString() === noteId);
+const navOverlay = document.querySelector('.navOverlay')
 
 if(!note){
     location.assign('/')
@@ -37,7 +38,6 @@ function updateNote(){
     
 }
 
-const navOverlay = document.querySelector('.navOverlay')
 
 function openNav(){
     navOverlay.style.visibility = 'visible'
