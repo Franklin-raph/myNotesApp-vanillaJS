@@ -127,9 +127,9 @@ input,textarea{
   position: relative;
   padding: .3rem .7rem;
   border-left: 5px solid #1746A2;
-  border-top: 1px solid #425F57;
-  border-bottom: 1px solid #425F57;
-  border-right: 1px solid #425F57;
+  border-top: 1px solid #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
+  border-right: 1px solid #cfcfcf;
 }
 
 .nonotes{
