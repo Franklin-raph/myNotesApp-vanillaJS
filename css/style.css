@@ -303,6 +303,10 @@ input,textarea{
     cursor: pointer;
   }
 
+  .showNav{
+    visibility: visible;
+  }
+
   .navOverlay{
     background-color: rgba(0, 0, 0, 0.925);
     height: 100vh;
@@ -326,10 +330,5 @@ input,textarea{
     flex-direction: column;
     justify-content: center;
     z-index: 2;
-  }
-  
-  .nav a{
-    color: #000 !important;
-    border: 1px solid #000 !important;
   }
 }

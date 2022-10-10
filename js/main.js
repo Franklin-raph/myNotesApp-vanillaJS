@@ -150,8 +150,14 @@ function filterNotes(){
     })
 }
 
-function openNav(){
+const navOverlay = document.querySelector('.navOverlay')
 
+function openNav(){
+    navOverlay.style.visibility = 'visible'
+}
+
+function closeNav(){
+    navOverlay.style.visibility = 'hidden'
 }
 
 // NEWS
