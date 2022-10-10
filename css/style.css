@@ -93,6 +93,11 @@
   align-items: center;
 }
 
+.searchDiv input{
+  outline: none;
+  border-right: 0;
+}
+
 .ri-search-line{
   background-color: #1746A2;
   padding: 10px 11px;
@@ -130,6 +135,7 @@ input,textarea{
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
   border-right: 1px solid #cfcfcf;
+  border-radius: 7px;
 }
 
 .nonotes{
